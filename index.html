@@ -5,27 +5,519 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/swiper.min.css" rel="stylesheet">
   <link href="css/common.css" rel="stylesheet">
   <link href="css/colorbox.css" rel="stylesheet">
   <link rel="shortcut icon" href="images/favicon.ico"/>
-  <title>레오네: 레전드 오브 네버랜드</title>
+  <title>カバラの伝説</title>
   <meta name="keywords" content="" />
   <meta name="description" content="" />
+  <link rel="shortcut icon" href="images/favicon.ico"/>
 </head>
-<body>    
-<div class="part1_main">
-  <div class="main_show">
-    <div class="part1_logo animate__animated  animate__zoomIn"><img src="images/zs_small_logo.png"></div>
-    <div class="part1_center">
-      <div class="part1_btn ani  animate__animated animate__fadeInUp"  swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5S" swiper-animate-delay="0.45s">
-        <a href="#"><img src="images/part1_btn.png"></a>
+
+<body>
+<!--蒙层--> 
+<div class="masked" id="masked"></div>
+<!--email弹窗-->
+<div class="part1_tc_email" id="tc_succes_big" style="display: none;"> 
+  <div class="tc_email_bg">
+    <div class="closed"><img src="images/tc_closed.png" alt=""></div>
+    <div class="email_wrap">
+      <div class="email_input" >
+        <P><input name="mobile" type="text"  class="email_content" value=""/></P>
+      </div>
+      <div class="email_btn">
+        <a href="javascript:void(0)"><img src="images/part1_tc_btn.png"></a>
       </div>
     </div>
+  </div>   
+</div> 
+<!--点击応募する对应弹窗-->
+<div class="part3_tc_success"  style="display: none;"> 
+  <div class="part3_tc_bg">
+    <div class="closed"><img src="images/tc_closed.png" alt=""></div>
+  </div>   
+</div> 
+<!--footer对应弹窗-->
+<div class="footer_tc_tip"  style="display: none;"> 
+  <div class="footer_tip_bg">
+    <div class="closed"><img src="images/tc_closed.png" alt=""></div>
+  </div>   
+</div> 
+<!--点击首屏幕弹窗内按钮-->
+<div class="part1_tc_denglu"  style="display: none;"> 
+  <div class="part1_tc_denglu_bg">
+    <div class="closed"><img src="images/tc_closed.png" alt=""></div>
+  </div>   
+</div> 
+<!--导航栏--> 
+<div class="nav_box">
+  <div class="nav_box_main">
+      <div class="nav_top">
+          <div class="nav_logo"><img src="images/nav_logo.png"></div>
+          <div class="closed"><img src="images/menu_closed.png"></div>
+      </div> 
+      <div class="nav_btn">
+          <div class="nav_link">
+              <div class="link01  active link"><a href="index.html" target="_blank">トップ  </a></div>
+              <div class="link02 link news"><a href="javascript:void(0)">予約特典  </a></div>
+              <div class="link03 link characters"><a href="javascript:void(0)">CBT募集 </a></div>
+              <div class="link05 link flower"><a href="javascript:void(0)">最新情報 </a></div>
+              <div class="link06 link features"><a href="javascript:void(0)">キャラクター </a></div>
+              <div class="link07 link features"><a href="javascript:void(0)">花精霊</a></div>
+              <div class="link link_ico">
+                <a href="#"><img src="images/nav_twitter.png" alt=""></a>
+                <a href="#"><img src="images/nav_email.png" alt=""></a>
+              </div>
+          </div>
+      </div>
   </div>
-</div>  
+</div>
+<!--menu--> 
+  <div class="common_menu"><img src="images/part1_menu.png"></div>
+  <!--主体内容--> 
+        <!--part1-->
+      <div class="part slide1" id="pro1" name="pro1">
+        <div class="main_show">
+          <div class="part1_masked"></div>
+          <div class="part1_closed" style="display: none;"><img src="images/part1_video_closed.png"></div>
+          <!-- <video id="video" preload="auto" class="bg-video video_hidden" src="media/main.mp4" onmouseover="play_v1(this)" onmouseleave="stop_v1(this)"></video>
+          <video src="media/main.mp4" id="video1" class="bg-video1" muted="" loop="loop" autoplay="autoplay"></video> -->
+          <!-- <video id="video" preload="auto" class="bg-video video_hidden" src="media/main.mp4" onmouseover="play_v1(this)" onmouseleave="stop_v1(this)"></video> -->
+          <video id="video1" x5-video-player-type="h5-page" x5-playsinline="true" webkit-playsinline playsinline muted autoplay loop class="bgvideo video bg-video">
+            <source src="media/main.mp4" type="video/mp4">
+          </video> 
+          <div class="part1_wrap">
+              <div class="part1_video_btn">
+                <a class="part1_video_play video1" id="playbtn" href="https://www.youtube.com/embed/8QsLr6U2IO0/?autoplay=1&amp;loop=1;controls=0&amp;showinfo=0&amp;fmt=22"><div><span></span></div></a> 
+              </div>
+                <div class="part1_logo"><img src="images/part1_logo.png"></div>
+                <h1 class=" part1_btn_cbt">
+                  <img src="images/part1_img_cbt.png" alt="">
+                </h1>
+                <div class="part1_down"><img src="images/part1_down_row.png"></div>
+                <div class="part_four_btn">
+                  <div class="part1_btn">
+                    <a href="https://apps.apple.com/jp/app/カバラの伝説/id1641477143" target="_blank"><img src="images/part1_btn_ios.png" alt=""></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.arkgames.ggplay.tlonjp" target="_blank"><img src="images/part1_btn_gg.png" alt=""></a>
+                  </div>
+                  <div class="part1_btn">
+                    <a href="https://twitter.com/Cabala_JP" target="_blank"><img src="images/part1_btn_twitter.png" alt=""></a>
+                    <span class="part1_email_link"><img src="images/part1_btn_email.png" alt="" class="btn_last"></span>
+                  </div>
+                </div>
+              </div>
+          </div>
+ 
+      </div>
+        <!--part2-->
+      <div class="part slide2" id="pro2"  name="pro2">
+        <div class="main_show">
+          <div class="part2_slogen"><img src="images/part2_title.png"></div>
+          <div class="dc_wrap">
+            <div class="dc_bg">
+              <div class="dc_50_hover dc" >
+                <img src="images/part2_dc_img_hover1.png"></div>
+              <div class=" dc_100_hover dc" >
+                <img src="images/part2_dc_img_hover1.png">
+              </div>
+              <div class=" dc_130_hover dc" >
+                <img src="images/part2_dc_img_hover1.png">
+                </div>
+            </div>
+            <div class="dc_bg">
+              <div class=" dc_160_hover dc">
+                <img src="images/part2_dc_img_hover1.png">
+                </div>
+              <div class=" dc_180_hover dc_t" >
+                <img src="images/part2_dc_img_hover2.png">
+                </div> 
+                <div class=" dc_200_hover dc_t" >
+                  <img src="images/part2_dc_img_hover2.png">
+                </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+        <!--part3-->
+      <div class="part slide3"  id="pro3"  name="pro3">
+        <div class="main_show">
+          <div class="register_content">
+            <div class="ios_tab">
+              <lable class="one gg"><span class="input_style radio_bg radio_bg_check"><input type="radio" name="type" value="and" checked="checked"></span><strong class="red"><img src="images/part3_ico_gg.png"></strong></lable>
+              <lable class="one ios"><span class="input_style radio_bg"><input type="radio" name="type" value="ios"></span><strong><img src="images/part3_ico_ios.png"></strong></lable>
+            </div>
+          <div class="register_input">
+              <p><input name="mobile" type="text" class="text_content1" value="123"></p>
+          </div>
+          <div class="register_checkbox_tip">
+            <p>
+              <input type="checkbox" id="checkbox1">
+              <a href="privacy.html" target="_blank"><img src="images/part3_cbt_checktip_img1.png" class="part3_link_privacy"></a>
+              <img src="images/part3_cbt_checktip_img2.png" class="part3_cbt_checktip_img2">
+            </p>  
+          </div>
+          <div class="register_btn">
+           <a href="javascript:void(0)"><img src="images/part3_register_btn.png"></a> 
+          </div>
+        </div>
+        
+      </div>  
+     </div>
+       <!--part4-->
+      <div class="part  slide4"  id="pro4"  name="pro4">
+        <div class="main_show">
+          <div class="scrollwrap">
+            <div class="swiper-container scrollone">
+              <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h3>■実施概要</h3>
+                <p>カバラの伝説の正式サービスに先立ち、クローズドβテスト（以下、CBT）を実施いたします。</p>
+                <p>冒険者の皆様、是非ご協力をお願いいたします。</p>
+                <p>正式サービス開始に向け、ゲームの改善を目的としたクローズドβテストを実施いたします。</p>
+                <p> プレイされた皆さまからのご意見・ご感想を元に、</p>
+                <p>さらなる品質向上に努めてまいりますので、ぜひご協力をお願いいたします。</p>
+                <p>皆様のご参加をお待ちしております。</p>
+                <h5>※ご登録いただく情報の取り扱いについてはプライバシーポリシーをご確認ください。</h5>
+                <h6>・募集人数：<span>2000名</span></h6> 
+                <h6>・募集期間：<span>2022年10月21日（金曜日）～2022年11月6日（日曜日</span>）</h6> 
+                <h6>・当選発表：<span>2022年11月7日（月曜日）</span></h6> 
+                <h6>・開催期間：<span>2022年11月8日（火曜日）～2022年11月15日（火曜日） </span></h6> 
+                <h5>※当選者の方へは10:00以降に順次、登録メールアドレス宛にご連絡いたします。</h5>
+                <h6>・推奨動作環境：</h6> 
+                <p>iOS：13.0以降 iPhone 8以降 (システムメモリ2GB以上)の端末</p>
+                <p>Android バージョン 7.0+以上(システムメモリ4GB以上)の端末をお持ちの方。</p>
+                <p> Googleアカウントとそれに紐付けられているメールアドレスをお持ちの方。</p>
+                <p>※応募の際は、上記に該当するメールアドレスをご入力ください。</p>
+                <h3>■参加規約</h3>
+                <p>・CBTへの参加手順は、当選メールに記載予定です。当選メールに記載された内容は、第三者へ公開または共有しないようご注意ください。</p>
+                <p>・期間内に募集人数を超える応募があった場合、抽選で参加者を決定いたします。</p>
+                <p>・応募の際には予め、「Neverland_jp@arkgames.net」からのメールを受信できるように設定をお願いします。</p>
+                <p>・クローズドβテストのプレイデータは正式サービスには引き継がれません。</p>
+                <p>・クローズドβテストでは有償通貨の購入はできません。</p>
+                <p>・クローズドβテストの開催期間および内容は予告なく変更する場合があります。</p>
+                <p>・期間中は、予告なく緊急メンテナンスを実施する場合があります。</p>
+                <p>・使用できない機能や正式サービスとは内容が異なる箇所があります。</p>
+                <p>・他者への権利譲渡等によるトラブルには一切対応できませんので、ご注意ください。</p>
+                <p>・CBTに関わるすべての権利は、Ark Games GLOBAL PTE. LTDに帰属するものとします。</p>
+                <p>・ご登録いただく情報の取り扱いについてはプライバシーポリシーをご確認ください。</p>
+                <p>・CBTの詳細につきましては募集期間終了からCBT開始までの間に、ご登録いただいたメールアドレス宛にご連絡いたします。なお、応募者多数の場合は抽選となり、当選された方のみご案内をお送りいたします。</p>
+                <h3>■iOSをご利用のお客様へ</h3>
+                <p>クローズドβテストでは「カバラの伝説」のテスト用アプリのほか、Apple社の「TestFlight」アプリを使用します。</p>
+                <p>登録されたメールアドレスあてに「TestFlight」利用に関するメールを送信しますので、あらかじめ「@email.apple.com」からのメールを受信できるよう、必ず設定をお願いいたします。「TestFlight」のメールを受信できない場合、CBT用アプリのインストールができず、クローズドβテストへ参加できない可能性があります。SMS/MMSでは当選メールを正常に受信できない場合があります。</p>
+                <p>必ずSMS/MMS以外で受信できるメールアドレスをご登録ください。</p>
+              </div>
+              </div>
+              <!-- Add Scroll Bar -->
+              <div class="swiper-scrollbar"></div>
+            </div>
+            </div>
+      </div>  
+      </div>
+        <!--part5-->
+      <div class="part slide5"  id="pro5"  name="pro5">  
+        <div class="main_show">
+            <div class="part5_kuang_top"><img src="images/part5_news_top_kuang.png"></div>
+            <div class="part5_kuang_left"><img src="images/part5_news_left_kuang.png"></div>
+            <div class="part5_kuang_right"><img src="images/part5_news_right_kuang.png"></div>
+            <div class="part5_kuang_bottom"><img src="images/part5_news_bottom_kuang.png"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swipera cf">
+              <div class="swiper-container img_swiper">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="images/part5_news_left_img1.jpg"></div>
+                      <div class="swiper-slide"><img src="images/part5_news_left_img2.jpg"></div>
+                      <div class="swiper-slide"><img src="images/part5_news_left_img3.jpg"></div>
+                  </div>
+                  <!-- Add Pagination -->
+              </div>
+            </div>   
+            <div class="news_box">
+              <div class="news_biaoti"> <a href="content.html"></a><img src="images/part5_news_title.png"></a></div>
+              <div class="news_list">
+                <ul>
+                  <li>
+                  <a href="content.html">
+                    <p class="news_title">この花と樹の世を、守りたこの花と樹の世を、守りたい </p> </a>
+                    <p class="news_date"><img src="images/part5_news_right_ico.png"></p>
+                  
+                  </li>
+                  <li>
+                    <a href="content.html">
+                      <p class="news_title">この花と樹の世を、守りたいこの花と樹の世を、守りたいこの花と樹の世を、守りたい</p>  </a>
+                      <p class="news_date"><img src="images/part5_news_right_ico.png"></p>
+                  
+                  </li>
+                  <li>
+                    <a href="content.html">
+                      <p class="news_title">この花と樹の世を、守りた この花と樹の世を、守りたい</p>  </a>
+                      <p class="news_date"><img src="images/part5_news_right_ico.png"></p>
+                 
+                  </li>
+                  <li>
+                    <a href="content.html">
+                      <p class="news_title">この花と樹の世を、守りたこの花と樹の世を、守りたい </p>  </a>
+                      <p class="news_date"><img src="images/part5_news_right_ico.png"></p>
+          
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div> 
+        <!--part6-role-->    
+      <div class="part slide6" id="pro6"  name="pro6"> 
+        <div class="main_show">
+          <div class="game_roles">
+              <div class="swiper-container roles_wrap">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="role_info role_info1">
+                          <img src="images/part6_text_xz.png">
+                        </div>
+                        <div class="role_img1 role_img"></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="role_info role_info2">
+                          <img src="images/part6_text_gj.png">
+                        </div>
+                        <div class="role_img2 role_img"></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="role_info role_info3">
+                          <img src="images/part6_text_gjs.png">
+                        </div>
+                        <div class="role_img3 role_img"></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="role_info role_info4">
+                          <img src="images/part6_text_zs.png">
+                        </div>
+                        <div class="role_img4 role_img"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="dock_list">
+              <ul class="swiper_dock_list">
+                  <li > 
+                    <a href="javascript:void(0)"><img class="icon on" src="images/part6_ico_hover1.png"/></a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"><img class="icon " src="images/part6_ico_hover2.png"/></a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"><img class="icon" src="images/part6_ico_hover3.png"/></a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"><img class="icon" src="images/part6_ico_hover4.png"/></a>
+                  </li>
+              </ul>
+              </div>
+          </div>   
+      </div>
+      </div>
+        <!--part8_role_Character-->
+      <div class="part slide7"  id="pro7"   name="pro7"> 
+          <div class="main_show">
+            <div class="role">
+                <div class="part8_menu">
+                  <div class="list">
+                    <div class="swiper-container part8_swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/part7_flower_ct.png" /></div>
+                        <div class="swiper-slide"><img src="images/part7_flower_jzh.png" /></div>
+                        <div class="swiper-slide"><img src="images/part7_flower_sly.png" /></div>
+                        <div class="swiper-slide"><img src="images/part7_flower_yjc.png" /></div>
+                        <div class="swiper-slide"><img src="images/part7_flower_jg.png" /></div>
+                        <div class="swiper-slide"><img src="images/part7_flower_sl.png" /></div>
+                        <div class="swiper-slide"><img src="images/part7_flower_zyh.png" /></div>
+                        <div class="swiper-slide"><img src="images/part7_flower_sc.png" /></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+              </div>
+              <dl class="content_tro">
+              
+                 <!--刺桐-->
+                <dd><img src="images/part7_img_ct.png" class="role_people"/></dd>
+                <!--金盏花-->
+                <dd><img src="images/part7_img_jzh.png" class="role_people"/></dd>
+                 <!-- 十六夜-->
+                <dd><img src="images/part7_img_sly.png" class="role_people"/></dd>
+                 <!--月见草-->
+                <dd><img src="images/part7_img_yjc.png" class="role_people"/></dd>
+                <!--桔梗-->
+                <dd><img src="images/part7_img_jg.png" class="role_people"/></dd>
+                <!--睡莲-->
+                <dd><img src="images/part7_img_sl.png" class="role_people"/></dd>
+                 <!--紫阳花-->
+               <dd><img src="images/part7_img_zyh.png" class="role_people"/></dd>
+               
+                 <!--山茶cuowu-->
+               <dd><img src="images/part7_img_sc.png" class="role_people"/></dd>
+            </dl>
+            </div>
+        </div>
+      </div> 
+      <!--part8-footer-->
+      <div class="slide8"   id="pro8">
+        <div class="main_show1">
+          <div class="footer">
+            <div class="footer_btn">
+              <a href="https://apps.apple.com/jp/app/カバラの伝説/id1641477143" target="_blank"><img src="images/part8_footer_ios.png"></a>
+              <a href="https://play.google.com/store/apps/details?id=com.arkgames.ggplay.tlonjp" target="_blank"><img src="images/part8_footer_gg.png"></a>
+            </div>
+            <div class="footer_line"></div>
+            <div class="footer_icon">
+              <img src="images/part8_footer_icon.png">
+            </div>
+            <div class="footer_line"></div>
+            <div class="footer_bottom_wrap">
+                <div class="footer_notice_link">
+                  <ul>
+                    <li><a href="privacy.html" target="_blank">プライバシーポリシー</a></li>
+                    <li><a href="rule.html" target="_blank">利用規則</a></li>
+                    <li><a href="teding.html" target="_blank">特定商取引法</a></li>
+                  </ul>
+                </div>
+                <div class="footer_notice_link">
+                  <ul>
+                    <li><a href="zijin.html" target="_blank">資金決済法</a></li>
+                    <li><a href="javascript:void(0)" class="footer_tc_link">お問い合わせ</a></li>
+                    <li><a href="#pro1" class="footer_index">サイトトップ</a></li>
+                    
+                  </ul>
+                </div>
+            </div>
+            <div class="footer_line"></div>
+            <div class="footer_logo"><img src="images/part8_footer_ag_logo.png"></div>
+          </div>
+        </div>
+      </div> 
   <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/swiper.min.js"></script>
   <script src="js/qiehuan.js"></script>
+  <script src="js/input.js"></script>
   <script src="js/jquery.colorbox.js"></script>
+  <script>
+    $(function(){
+
+     
+$('.link01,.footer_index').click(function(){
+    document.querySelector("#pro1").scrollIntoView();
+    $('.nav_box').removeClass('active');
+    $(this).addClass('active').siblings('div').removeClass('active');
+    
+});
+$('.link02').click(function(){
+    document.querySelector("#pro2").scrollIntoView();
+    $('.nav_box').removeClass('active');
+    $(this).addClass('active').siblings('div').removeClass('active');
+});
+
+$('.link03,.part1_btn_cbt').click(function(){
+    document.querySelector("#pro3").scrollIntoView();
+    $('.nav_box').removeClass('active');
+    $(this).addClass('active').siblings('div').removeClass('active');
+});
+
+$('.link05').click(function(){
+    document.querySelector("#pro5").scrollIntoView();
+    $('.nav_box').removeClass('active');
+    $(this).addClass('active').siblings('div').removeClass('active');
+});
+
+$('.link06').click(function(){
+  document.querySelector("#pro6").scrollIntoView();
+    $('.nav_box').removeClass('active');
+    $(this).addClass('active').siblings('div').removeClass('active');
+});
+
+$('.link07').click(function(){
+  document.querySelector("#pro7").scrollIntoView();
+    $('.nav_box').removeClass('active');
+    $(this).addClass('active').siblings('div').removeClass('active');
+});
+
+
+//文字滚动时，禁止全屏滚动
+$(function () {
+    $('.note').hover(function () {
+      swiper1.mousewheel.disable();
+    }, function () {
+      swiper1.mousewheel.enable();
+    })
+}) 
+
+    })
+
+  //点击menu弹出菜单栏
+$('body').on("click", '.common_menu', function () {
+  $('.nav_box').toggleClass('active')
+});
+$('body').on("click", '.nav_box .closed', function () {
+  $('.nav_box').removeClass('active')
+});
+
+
+/*part3--角色*/
+var roleswiper = new Swiper('.roles_wrap', {
+    loop : true,
+    effect : 'fade',
+    on: {
+      slideChangeTransitionStart:function(roleswiper){
+            var length = $(".game_roles .swiper_dock_list li").length;
+            $(".game_roles .swiper_dock_list li img").removeClass('on');
+            $(".game_roles .swiper_dock_list li img").eq((this.activeIndex-1)%length).addClass('on');
+        },
+    },
+   
+});
+$(".game_roles .swiper_dock_list li").click(function(){
+    var index = $(this).index()+1;
+    roleswiper.slideTo(index);
+    $(".game_roles .swiper_dock_list li img").removeClass('on');
+    $(".game_roles .swiper_dock_list li img").eq(index-1).addClass('on');
+});
+
+
+//视频弹窗
+$(function(){
+    $(".video1").colorbox({iframe:true, innerWidth:"80%", innerHeight:"30%"});	
+})
+   
+ /*part6--轮播*/ 
+ var swiper22 = new Swiper('.img_swiper', {
+      loop : true,
+      pagination: {
+          clickable: true,
+          el: '.slide5 .swiper-pagination',
+      },
+      
+      on: {
+          resize: function () {
+                  setTimeout(function(){
+                    swiper22.update()
+                  },500)
+              
+              },
+      }
+});
+
+
+var swiperone = new Swiper('.scrollone', {
+			direction: 'vertical',
+			slidesPerView: 'auto',
+			freeMode: true,
+			scrollbar: {
+			el: '.swiper-scrollbar',
+			//	hide: true,
+			},
+			mousewheel: true,
+		});
+  </script>
 </body>
+
 </html>
